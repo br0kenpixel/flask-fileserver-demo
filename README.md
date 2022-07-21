@@ -11,3 +11,7 @@ It allows uploading, listing, downloading, renaming and deleting files.
 *Note #2*: The `Date added` column shows different results based on your OS. On macOS and Linux it shows time based on `st_birthtime` from `os.path(file)`. On Windows it shows `st_mtime` from the same function, as Windows does not support `st_birthtime`.
 
 ⚠️ This project is just for demo purposes. Don't use it on a production server.
+
+Used tools and sources:  
+HTML Editor site: https://www.quackit.com/html/online-html-editor/full/   
+Flask doc: https://flask.palletsprojects.com/en/2.1.x/
