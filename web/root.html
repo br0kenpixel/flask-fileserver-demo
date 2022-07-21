@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<title>Files</title>
+</head>
+<body>
+<h1>Files</h1>
+
+<p style="line-height:0.4">Welcome to the File Server! &nbsp;| &nbsp;{{date}} &nbsp;| &nbsp;{{file_count}} files, {{size}}</p>
+<p style="line-height:0.4"><a href="/upload">Upload new file</a></p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:800px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><strong>Name</strong></td>
+			<td style="text-align: center;"><strong>Kind</strong></td>
+			<td style="text-align: center;"><strong>Date added</strong></td>
+			<td style="text-align: center;"><strong>Size</strong></td>
+			<td style="text-align: center;"><strong>Actions</strong></td>
+		</tr>
+		{% for file in files %}
+			<tr>
+				
+				<td style="text-align: center;">{{file[0]}}</td>
+				<td style="text-align: center;">{{file[1]}}</td>
+				<td style="text-align: center;">{{file[2]}}</td>
+				<td style="text-align: center;">{{file[3]}}</td>
+				<td style="text-align: center;">
+					<input name="delBtn" type="submit" value="Delete" onclick="location.href='/del?file={{file[0]}}'"/>
+					<input name="renameBtn" type="submit" value="Rename" onclick="location.href='/rename?file={{file[0]}}'"/>
+					<input name="downloadBtn" type="submit" value="Download" onclick="location.href='/get?file={{file[0]}}'"/>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<p style="line-height:0.1">__________________________________________________________________________________</p>
+<p style="line-height:0.1">Written by: br0kenpixel - <em>For demonstration purposes only!</em></p>
+</body>
+</html>

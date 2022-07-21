@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>Files - Rename</title>
+</head>
+<body>
+<h1>Files - Viewer</h1>
+
+<form action="rename" enctype="text/plain" name="form">
+<p style="line-height:0.1">
+	Current name:
+	<input name="_src" type="text" value="{{src}}" size="64" disabled />
+	<input name="file" type="text" value="{{src}}" hidden />
+</p>
+<p style="line-height:0.1">
+	New name:
+	<input name="dest" type="text" size="64" />
+</p>
+<input name="submitBtn" type="submit" value="Submit" />
+</form>
+
+<p><input name="backBtn" onclick="location.href='/'" type="button" value="Go back" /></p>
+
+<p style="line-height:0.1">__________________________________________________________________________________</p>
+<p style="line-height:0.1">Written by: br0kenpixel - <em>For demonstration purposes only!</em></p>
+</body>
+</html>
